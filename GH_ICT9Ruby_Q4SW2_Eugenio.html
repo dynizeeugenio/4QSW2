@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Hour Converter</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="bg-secondary" style="margin: 95px;">
+	<div class="bg-light" style="padding: 35px; text-align: center;">
+	<h2><b>Day Converter</b></h2>
+
+	<input type="text" id="id1" placeholder="Days to Seconds"><br>
+	<input type="submit" value="compute" onclick="secs()"><br>
+	<p id="seconds"></p>	
+	<input type="text" id="id2" placeholder="Days to Minutes"><br>
+	<input type="submit" value="compute" onclick="mins()"><br>
+	<p id="minutes"></p>
+	<input type="text" id="id3" placeholder="Days to Hours"><br>
+	<input type="submit" value="compute" onclick="hours()"><br>
+	<p id="hours"></p>
+	<script>
+		function secs () {
+			var num1 = document.getElementById('id1').value;
+			var answer = 86400 * num1;
+			document.getElementById('seconds').innerHTML = "It is " + answer + " seconds.";
+		}
+
+		function mins () {
+			var num2 = document.getElementById('id2').value;
+			var answer = num2 * 1440;
+			document.getElementById('minutes').innerHTML = "It is " + answer + " minutes.";
+		}
+
+		function hours () {
+			var num3 = document.getElementById('id3').value;
+			var answer = num3 * 24;
+			document.getElementById('hours').innerHTML = "It is " + answer + " hours.";
+		}
+	</script>
+</body>
+</html>
